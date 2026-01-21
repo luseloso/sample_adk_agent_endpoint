@@ -1,0 +1,7 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', '$_IMAGE_NAME', '.']
+# We'll expect substitutions or just rely on CLI --tag which overrides/adds.
+# Actually, if we use CLI --tag, we don't strictly need cloudbuild.yaml for a simple Docker build.
+# We can delete this file or keep it for more complex steps later.
+# For now, let's keep it simple.
